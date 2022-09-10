@@ -1,0 +1,60 @@
+<style>
+    body{
+        overflow: hidden;
+        background-color: #065973;
+    }
+    table, th, td{
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid black;
+        border-collapse: collapse;
+        position: center;
+        padding-top: 13em;
+    }
+    th{
+        background-color: #065972;
+    }
+    
+    tr:nth-child(even){
+        background-color: #7396c6;
+    }
+    th, td{
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        transition: 0.1s;
+    }
+    th:hover{
+        background-color: #043c73;
+    }
+    td:hover{
+        background-color: #043c73;
+    }
+    caption{
+        font-weight: bold;
+        margin: 10px;
+    }
+    button{
+        font-family:Arial, Helvetica, sans-serif;;
+        font-weight: bold;
+        background-color: #8e0933;
+        color: #fff;
+        padding: 12px 16px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: 1.0s;
+    }
+    button:hover{
+    transform: scale(1.1);
+    }
+    .tombol{
+        text-align: center;
+    }
+    .ubah{
+        background-color: #747e81;
+    }
+    .hapus{
+        background-color: #747e81;
+    }
+</style>
