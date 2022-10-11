@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styleanjar.css">
+	<title>SPA MENU</title>
+</head>
+<body>
+
+	<ul>
+        <li class="logo">
+            <h3>Ann</h3>
+        </li>
+		<li style="float:right;">
+			<a href="#home" class="active">Home</a>
+		</li>
+		<li style="float:right;">
+			<a href="#about" class="active">About</a>
+		</li>
+		<li style="float:right;">
+			<a href="#kontak" class="active">Contact</a>
+		</li>
+		<li style="float:right;">
+			<a href="#projek" class="active">Project</a>
+		</li>
+	</ul>
+	<div class="clearfloat"></div>
+
+	<div id="konten">
+		<div id="isikonten">
+			<div id="home" class="isi__1">
+				<p>ini halaman home</p>
+			</div>
+			<div id="about" class="isi__2">
+				<p>Nama saya Anjar Ayuning Lestari Kelas TI-KIP2021-P1</p>
+			</div>
+			<div id="kontak" class="isi__3">
+				<p>Follow my instagram @annnjarr_</p>
+			</div>
+			<div id="projek" class="isi__4">
+				<p>Bissmilah sambil belajar</p>
+			</div>
+		</div>
+<script >
+$(document).ready(function() {
+    var currentSection = 0;
+    $('#konten').hide();
+    $('ul li a').click(function() {       
+        
+        $('ul li a').removeClass('active');
+        $(this).addClass('active');
+        
+        var href = $(this).attr('href');
+        $('#isikonten>div').hide();
+        
+        $(href).show();
+              
+        if(currentSection == 0){
+            $('#konten').slideToggle(200);
+            currentSection = href;
+        }else if(currentSection == href){
+             $('#konten').slideToggle(200);
+             currentSection = 0;    
+        }else{
+            currentSection = href;
+        }
+        return false;
+    });
+  });
+</script>
+</body>
+</html>
